@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    app:layoutDescription="@xml/activity_main_scene">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/header_image"
@@ -25,9 +24,9 @@
         android:layout_height="wrap_content"
         android:background="@color/gray"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
 
         <TextView
             android:id="@+id/motion_desc"
@@ -48,8 +47,8 @@
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/title_layout"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/header_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/header_image">
@@ -76,4 +75,4 @@
             android:typeface="monospace" />
 
     </LinearLayout>
-</androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

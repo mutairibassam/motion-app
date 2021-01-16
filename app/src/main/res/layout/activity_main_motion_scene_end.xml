@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    app:layoutDescription="@xml/activity_main_scene">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/header_image"
@@ -15,19 +14,20 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/content_layout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <LinearLayout
         android:id="@+id/content_layout"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/gray"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title">
 
         <TextView
             android:id="@+id/motion_desc"
@@ -35,23 +35,21 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:fontFamily="sans-serif-thin"
-            android:lineSpacingExtra="2sp"
-            android:lineSpacingMultiplier="1.2"
-            android:padding="8dp"
             android:text="@string/motion_desc"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/title_layout"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/header_image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/header_image">
 
         <TextView
@@ -59,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/ic_baseline_keyboard_arrow_up_24"
+            android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
             android:textSize="14sp" />
 
         <TextView
@@ -67,13 +65,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-thin"
-            android:text="@string/title"
             android:paddingStart="16dp"
             android:paddingBottom="8dp"
-            android:textColor="@color/white"
+            android:text="@string/title"
+            android:textColor="#000000"
             android:textSize="36sp"
             android:textStyle="bold"
             android:typeface="monospace" />
-
     </LinearLayout>
-</androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
