@@ -17,13 +17,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/background" />
+        app:srcCompat="@drawable/logo" />
 
     <LinearLayout
         android:id="@+id/content_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@color/gray"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/title"
@@ -37,7 +37,7 @@
             android:fontFamily="sans-serif-thin"
             android:text="@string/motion_desc"
             android:textAlignment="viewStart"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="14sp" />
     </LinearLayout>
 
