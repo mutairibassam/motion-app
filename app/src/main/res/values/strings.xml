@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Motion-app</string>
+
+    <string name="motion_desc">
+        MotionLayout is intended to move, resize, and animate UI elements with which users interact,
+        such as buttons and title bars. Motion in your app should not be simply a gratuitous special effect in your application.
+    </string>
+    <string name="title">Motion Layout</string>
 </resources>
