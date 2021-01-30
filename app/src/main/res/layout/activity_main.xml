@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    app:layoutDescription="@xml/activity_main_scene">
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/header_image"
@@ -48,28 +48,21 @@
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/title_layout"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/header_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/header_image">
 
-        <TextView
-            android:id="@+id/arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/ic_baseline_keyboard_arrow_up_24"
-            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/title_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-thin"
-            android:text="@string/title"
             android:paddingStart="16dp"
             android:paddingBottom="8dp"
+            android:text="@string/title"
             android:textColor="@color/white"
             android:textSize="36sp"
             android:textStyle="bold"
